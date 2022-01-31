@@ -10,7 +10,7 @@ public class Triangulo extends Punto{
     public Triangulo() {
     }
 
-    public Triangulo(int ladoA, int ladoB, int ladoC) {
+    public Triangulo(double ladoA, double ladoB, double ladoC) {
         this.ladoA = ladoA;
         this.ladoB = ladoB;
         this.ladoC = ladoC;

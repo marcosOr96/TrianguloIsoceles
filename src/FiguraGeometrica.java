@@ -6,7 +6,6 @@ public class FiguraGeometrica{
         triangulos = new Triangulo[tamañoTriangulos];
     }
 
-
     public Triangulo[] getTriangulos() {
         return triangulos;
     }
@@ -41,15 +40,15 @@ public class FiguraGeometrica{
 
     public double hallarTrianguloAreaMayor() {
         double area = 0;
+        int posicionMayor=0;
         for (int i = 0; i < triangulos.length; i++) {
-            area = triangulos[i].calcularArea();
             if (triangulos[i].calcularArea() > area) {
                 area = triangulos[i].calcularArea();
+                posicionMayor=i;
             }
-            if (triangulos[i].calcularArea() <= area) {
-                area = area;
-            }
+
         }
+        System.out.println(posicionMayor);
         return area;
     }
 }
