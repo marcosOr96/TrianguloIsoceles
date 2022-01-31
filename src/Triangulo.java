@@ -1,4 +1,4 @@
-public class Triangulo extends Main{
+public class Triangulo extends Punto{
 
     private int cantTriangulo;
     private double ladoA;
@@ -22,6 +22,14 @@ public class Triangulo extends Main{
     }
 
     public Triangulo(int cantTriangulo) {
+        this.cantTriangulo = cantTriangulo;
+    }
+
+    public int getCantTriangulo() {
+        return cantTriangulo;
+    }
+
+    public void setCantTriangulo(int cantTriangulo) {
         this.cantTriangulo = cantTriangulo;
     }
 
@@ -65,14 +73,6 @@ public class Triangulo extends Main{
         this.base = base;
     }
 
-    public int getCantTriangulo() {
-        return cantTriangulo;
-    }
-
-    public void setCantTriangulo(int cantTriangulo) {
-        this.cantTriangulo = cantTriangulo;
-    }
-
     public double calcularPerimetro(){
         if (ladoA == ladoB || ladoA == ladoC || ladoB == ladoC) {
             double perimetro = ladoA + ladoB + ladoC;
@@ -84,22 +84,6 @@ public class Triangulo extends Main{
     public double calcularArea() {
         double area = base*altura/2;
         return area;
-    }
-
-    public double areaMayor() {
-        Triangulo matrizTriangulo[][] = new Triangulo[cantTriangulo][6];
-        for (int i = 0; i < matrizTriangulo.length; i++) {
-            matrizTriangulo[i][0] = getLadoA();
-            matrizTriangulo[i][1] = getLadoB();
-            matrizTriangulo[i][2] = getLadoC();
-            matrizTriangulo[i][3] = getBase();
-            matrizTriangulo[i][4] = getAltura();
-            matrizTriangulo[i][5] = calcularArea();
-            for (int j = 0; j < matrizTriangulo[i].length; j++) {
-                return matrizTriangulo[i][j] = matrizTriangulo[i][j];
-            }
-        }
-        return 0;
     }
 }
 
